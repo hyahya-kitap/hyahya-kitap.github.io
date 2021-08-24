@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from w3lessons.info/demo/live-search-jquery/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Jul 2021 09:10:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Live Text Search with jQuery - w3lessons.info - by Karthikeyan K</title>
+<style>
+.container { width:600px; margin:0 auto; padding:10px; background:#fff; }
+#form { margin:0 auto; padding:5px; text-align:center }
+.filterinput { width:400px; height:30px; padding:2px; }
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+<script type="text/javascript">
+
+jQuery(document).ready(function(){
+								
+	jQuery('.s_download').click(function(){
+			var semail = jQuery("#itzurkarthi_email").val();
+			if(semail == '')
+			{
+				alert('Enter Email');
+				return false;
+			}
+			var str = "sub_email="+semail
+			jQuery.ajax({
+				type: "POST",
+				url: "download.php",
+				data: str,
+				cache: false,
+				success: function(htmld){
+						jQuery('#down_update').html(htmld);
+				}
+			});
+	  })
+ });
+(function ($) {
+  jQuery.expr[':'].Contains = function(a,i,m){
+      return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+  };
+ 
+  function live_search(list) {
+ 
+    $(".filterinput")
+      .change( function () {
+        var searchtext = $(this).val();
+        if(searchtext) {
+ 
+          $matches = $(list).find('a:Contains(' + searchtext + ')').parent();
+          $('li', list).not($matches).slideUp();
+          $matches.slideDown();
+ 
+        } else {
+          $(list).find("li").slideDown(200);
+        }
+        return false;
+      })
+    .keyup( function () {
+        $(this).change();
+    });
+  }
+ 
+  $(function () {
+    live_search($("#contents"));
+  });
+}(jQuery));
+</script>
+</head>
+
+<body style="background:#ccc;">
+
+<div class="container">
+<h2>Live Text Search with jQuery - w3lessons.info</h2>
+<div id="form">
+<form action="#" class="search">
+<input type="text" placeholder="type to filter" class="filterinput" />
+</form>
+</div>
+
+<ol id="contents">
+                                      <li>
+                                         <a href="http://w3lessons.info/2013/12/10/facebook-style-location-sharing-map-with-google-api/">Facebook Style Location Sharing Map with Google API</a>
+                                         <!-- Para -->
+                                         <p>Facebook Style Location Sharing Map with Google API - w3lessons.info</p>
+                                      </li>
+                                      <li>
+                                         <a href="http://w3lessons.info/2013/12/02/how-to-login-with-username-or-email-id-using-php-mysql/">How to Login with Username or Email Id using PHP & MYSQL</a>
+                                         <p>How to Login with Username or Email Id using PHP & MYSQL - w3lessons.info</p>
+                                      </li>
+                                      <li>
+                                         <a href="http://w3lessons.info/2013/11/25/getting-images-from-flickr-instagram-twitpic-imgur-deviantart-url-using-php-jquery/">Getting Images from Flickr, Instagram, Twitpic, Imgur & Deviantart Url using PHP & jQuery</a>
+                                         <p>Getting Images from Flickr, Instagram, Twitpic, Imgur & Deviantart Url using PHP & jQuery - Now a days major sites are using this feature to automatically embed images from a url. So I am going to explain you how to get images from url using PHP &amp; jQuery</p>
+                                      </li>
+                                      <li>
+                                         <a href="http://w3lessons.info/2013/11/18/facebook-style-hashtag-system-with-php-mysql-jquery/">Facebook Style Hashtag System with PHP, MYSQL & jQuery</a>
+                                         <p>Facebook Style Hashtag System with PHP, MYSQL & jQuery - If you are not aware of Hashtag, then I will say you would not using any social networking sites in a very large extent.  Here I am going to explain you about the advantages of hashtag &amp; how you can implement it in your web projects using php &amp; mysql</p>
+                                      </li>
+                                                                     
+</ol>
+
+
+<hr />
+
+
+ <div id="fb_download">
+  <h3>Download script for subscribed users only!</h3>
+  <table width="100%">
+  <tr>
+  <td>Enter your email : </td><td><input type="text" style="width:200px; padding:2px;" name="sub_email" id="itzurkarthi_email" value=""></td><td><input class="medium orange button s_download" type="button" value="Download"></td>
+  </tr>
+  </table>
+  
+  <div id="down_update" style="padding:5px;"> </div>
+  
+  <h3>New users please subscribe here!</h3>
+  <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onSubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=nextweb2', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+   <table>
+  <tr>
+  <td>Enter your email :</td><td><input type="text" style="width:200px; padding:2px;" name="email"/><input type="hidden" value="nextweb2" name="uri"/><input type="hidden" name="loc" value="en_US"/></td><td><input type="submit" class="medium orange button" value="Subscribe" /></td>
+  </tr>
+  <tr>
+  <td colspan="3" align="center"><p><a href="http://feeds.feedburner.com/nextweb2"><img src="https://feeds.feedburner.com/~fc/nextweb2?bg=99CCFF&amp;fg=444444&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a></p></td>
+  </tr>
+  </table>
+  </form>
+  
+  <p><font color="#FF0000">Note</font> : New subscribers email data will be updated every 10 hours</p>
+  
+  
+  </div>
+  
+  
+
+</div>
+
+
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=itzurkarthi"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'dark', 
+    'follow' : {
+      'services' : [
+        {'service': 'facebook', 'id': 'w3lessons.info'},
+        {'service': 'twitter', 'id': 'itzurkarthi'},
+        {'service': 'linkedin', 'id': 'itzurkarthi'},
+        {'service': 'google_follow', 'id': '100211765980263169317'},
+        {'service': 'vimeo', 'id': 'itzurkarthi'},
+        {'service': 'pinterest', 'id': 'itzurkarthi'},
+        {'service': 'tumblr', 'id': 'w3lessons'},
+        {'service': 'rss', 'id': 'http://w3lessons.info/feed'}
+      ]
+    },  
+    'whatsnext' : {},  
+    'recommended' : {
+      'title': 'Recommended for you:'
+    } 
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+
+
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_floating_style addthis_counter_style" style="left:10px;top:150px;">
+<a class="addthis_button_facebook_like" fb:like:layout="box_count"></a>
+<a class="addthis_button_tweet" tw:count="vertical"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="tall"></a>
+<a class="addthis_counter"></a>
+</div>
+<!-- AddThis Button END -->
+
+
+</body>
+
+<!-- Mirrored from w3lessons.info/demo/live-search-jquery/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Jul 2021 09:10:25 GMT -->
+</html>

@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harun Yahya Kitapları için Hazır Web Sayfaları</title>
+<meta name="description" content="ADNAN HARUN YAHYA ESERLERİNİN WEB SAYFALARI" > 
+    <link rel="canonical" href="https://harun-yahya-web.github.io/search/index.html">
+<style>
+h1 {
+  text-align: center;
+}
+.container { width:600px; margin:0 auto; padding:10px; background:#fff; }
+#form { margin:0 auto; padding:5px; text-align:center }
+.filterinput { width:400px; height:30px; padding:2px; }
+</style>
+<script src="jquery.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script>
+
+jQuery(document).ready(function ($) {
+  jQuery.expr[':'].Contains = function(a,i,m){
+      return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+  };
+ 
+  function live_search(list) {
+ 
+    $(".filterinput")
+      .change( function () {
+        var searchtext = $(this).val();
+        if(searchtext) {
+ 
+          $matches = $(list).find('a:Contains(' + searchtext + ')').parent();
+          $('li', list).not($matches).slideUp();
+          $matches.slideDown();
+ 
+        } else {
+          $(list).find("li").slideDown(200);
+        }
+        return false;
+      })
+    .keyup( function () {
+        $(this).change();
+    });
+  }
+ 
+  $(function () {
+    live_search($("#contents"));
+  });
+}(jQuery));
+</script>
+</head>
+
+<body style="background:#ccc;">
+
+<div class="container">
+<h1>Harun Yahya Kitap</h1>
+<div id="form">
+<form action="#" class="search">
+<input type="text" placeholder="type to filter" class="filterinput" />
+</form>
+</div>
+
+<ol id="contents">
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/adamlikDini-13b-tr/adamlikDini-13b-tr.html" target="_blank" rel="noopener">Adamlık Dini</a>
+                                         <!-- Para -->
+                                         <p>Adamlık Dini adlı bu kitapta insanların bir çoğunu, kendileri farkında olmadıkları halde etkisi altına almış olan güçlü bir dinden bahsedilmektedir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/AllahAkillaBilinir-tr-9b/AllahAkillaBilinir-tr-9b.html" target="_blank" rel="noopener">Allah Akılla Bilinir</a>
+                                         <p>Bedenimizden başlayıp, akıl almaz büyüklükteki evrenin en uç noktasına kadar fark ettiğimiz kusursuz dengenin ve mucizevi sistemlerin bir sahibi vardır.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/akilsizKuraniNasilYorumlar-11b-tr/akilsizKuraniNasilYorumlar-11b-tr.html" target="_blank" rel="noopener">Akılsız Kuran'ı Nasıl Yorumlar?</a>
+                                         <p>Bu kitapta, imandan uzak, akledemeyen kişilerin, Kuran'ı yanlış yorumlamalarının nedenleri ele alınmakta, ayetler hakkında yaptıkları akılsızca yorumlardan ve itirazlardan çeşitli örnekler incelenmekte ve cevapları verilmektedir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/alayDenenZulum-10b-tr/alayDenenZulum-10b-tr.html" target="_blank" rel="noopener">Alay Denen Zulüm</a>
+                                         <p>Tarih boyunca Allah'a ve ahirete iman etmeyen insanlar, kendilerine hak din anlatıldığında, yanlış bir yolda oldukları ve bu yoldan ayrılmazlarsa sonsuz bir cehennem hayatı ile karşılaşabilecekleri haber verildiğinde bunu kabul etmemişlerdir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/AllahIcinYasamak-17b-tr/AllahIcinYasamak-17b-tr.html" target="_blank" rel="noopener">Allah İçin Yaşamak</a>
+                                         <p>Müslüman, Allah'ın, dinine bağlananlara verdiği bir isimdir. Kuran'da tarif edilen Müslümanları diğer insanlardan ayıran temel fark ise, bu insanların Allah'ın sonsuz kudretinin tam anlamıyla farkında olmalarıdır. </p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/AllahinIsimleri-12b-tr/AllahinIsimleri-12b-tr.html" target="_blank" rel="noopener">Allah'ın İsimleri</a>
+                                         <p>Sizi ve kainatı en ince ayrıntısına kadar kusursuzca yaratan Allah'ı ne kadar tanıyorsunuz? </p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/AllahKorkusu-13b-tr/AllahKorkusu-13b-tr.html" target="_blank" rel="noopener">Allah Korkusu</a>
+                                         <p>Şu anda cehennemin kenarında olsanız ve oradaki zebanilerin cehennem ehline yaptıkları dayanılmaz işkenceleri gözünüzle görseniz, cayır cayır yanan ateşin uğultusunu, cehennem ehlinin çığlıklarını kemikleri çatırdatan inlemelerini, kahırla nefes alıp vermelerini, bir kez daha dünyaya geri dönmek isteyen pişmanlık dolu yalvarışlarını duysanız ve sonra tekrar dünyadaki yaşamınıza geri döndürülseniz acaba hayatınızda neler değişirdi?</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/AllahSevgisi-5b-tr/AllahSevgisi-5b-tr.html" target="_blank" rel="noopener">Allah Sevgisi</a>
+                                         <p>Sevgi, Allah'ın insanlara verdiği en büyük nimetlerden biridir. Her insan hayatı boyunca çok sevdiği, güvendiği, yakın hissettiği kişilerle birlikte olmak ister.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/amerikaninGoremedigiPKK-2b-tr/amerikaninGoremedigiPKK-2b-tr.html" target="_blank" rel="noopener">Amerika'nın Göremediği PKK</a>
+                                         <p>Yaklaşık 40 yıldır, Türkiye'yi bölerek topraklarımız üzerinde komünist-anarşist bir devlet kurma azminde olan PKK, son dönemlerde bu hedefine, ülkemiz içinde oluşturduğu illegal devlet yapılanmaları (KCK) yoluyla ulaşmaya çalışmaktadır.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/balarisiMucizesi-4b-tr/balarisiMucizesi-4b-tr.html" target="_blank" rel="noopener">Balarısı Mucizesi</a>
+                                         <p>Arıların olağanüstü özelliklerini incelediğimizde, bu canlıların insanların bile başaramayacakları işleri kolaylıkla yaptığını görürüz.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/basitliginKirliKulturu_6b_tr/basitliginKirliKulturu_6b_tr.html" target="_blank" rel="noopener">Basitliğin Kirli Kültürü</a>
+                                         <p>'Basit insan' denilince genel olarak görgü kurallarından habersiz, cahil, bilgisiz, nerede nasıl davranacağını, nasıl konuşacağını bilmeyen, ölçüsüz bir insan modeli akla gelir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/cahiliyeToplumundaInsanKarakterleri-8b-tr/cahiliyeToplumundaInsanKarakterleri-8b-tr.html" target="_blank" rel="noopener">Cahiliye Toplumunda İnsan Karakterleri</a>
+                                         <p>Kuran'ı, insanları yaratan, onların tek hakimi ve tek sahibi olan Allah indirmiştir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/CahiliyeToplumunuTerketme1b/CahiliyeToplumunuTerketme1b.html" target="_blank" rel="noopener">Cahiliye Toplumun Terketmek</a>
+                                         <p>Kuran’ın Zümer suresinde, ahirette insanların hesaba çekilmesinden bahsedilirken onların, cennete ya da cehenneme 'gruplar' halinde yollanacakları haber verilir (Zümer; 71-73).</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/COZUM-KURAN-AHLAKI-5b/COZUM-KURAN-AHLAKI-5b.html" target="_blank" rel="noopener">Çözüm Kuran Ahlakı</a>
+                                         <p>Geride bıraktığımız 20. yüzyıl, belaların, acıların, katliamların, sefaletin, büyük yıkımlar getiren savaş ve çatışmaların yüzyılıydı.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/darwinist-propaganda-yontemleri-2b-tr/darwinist-propaganda-yontemleri-2b-tr.html" target="_blank" rel="noopener">Darwinist Propaganda Yöntemleri</a>
+                                         <p>Bilim evrimi tam anlamıyla reddedip, ellerinde de tek bir tane bile bilimsel delil olmayınca, Darwinistler hipnoz metodunu kullanmaya karar verdiler.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/darwinizminInsanligaGetirdigiBelalar-6b-tr/darwinizminInsanligaGetirdigiBelalar-6b-tr.html" target="_blank" rel="noopener">Darwinizmin İnsanlığa Getirdiği Belalar</a>
+                                         <p>Geride bıraktığımız 20. yüzyıl, belaların, acıların, katliamların, sefaletin, büyük yıkımlar getiren savaş ve çatışmaların yüzyılıydı.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/DINSIZLIGIN-ILKEL-MANTIGI-6b/DINSIZLIGIN-ILKEL-MANTIGI-6b.html" target="_blank" rel="noopener">Dinsizliğin İlkel Mantığı</a>
+                                         <p>Hayatı ve ölümü Allah belirli bir amaçla yaratmış, insanlara doğruyu ve yanlışı öğreten hak kitaplar indirerek bu amacı onlara bildirmiştir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/DinsizliginDiniIleMucadele-6b/DinsizliginDiniIleMucadele-6b.html" target="_blank" rel="noopener">Dinsizliğin Dini İle Mücadele</a>
+                                         <p>Kitabın adını okuduğunuz zaman belki de kendinize 'Dinsizliğin dini' ne demek diye sormuş olabilirsiniz</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/dunyaHayatininGercegi-7b-tr/dunyaHayatininGercegi-7b-tr.html" target="_blank" rel="noopener">Dünya Hayatının Gerçeği</a>
+                                         <p>İnsanları dinden uzaklaştıran sebeplerin başında hiç kuşkusuz dünyaya olan bağlılıkları gelir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/evrimAldatmacasi-8b-tr/evrimAldatmacasi-8b-tr.html" target="_blank" rel="noopener">Evrim Aldatmacası</a>
+                                         <p>İnsanları dinden uzaklaştıran sebeplerin başında hiç kuşkusuz dünyaya olan bağlılıkları gelir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/gercegiDusundunuzMu-13b-tr/gercegiDusundunuzMu-13b-tr.html" target="_blank" rel="noopener">Gerçeği Düşündünüz mü?</a>
+                                         <p>Siz kimsiniz ve dünya üzerindeki hayatınızın amacı nedir? Sizi kim var etti, sahip olduğunuz mükemmel bedeni kim yarattı?</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/gizliAzaplarinCozumu-8b-tr/gizliAzaplarinCozumu-8b-tr.html" target="_blank" rel="noopener">Gizli Azapların Çözümü</a>
+                                         <p>Hangi şartlar altında olurlarsa olsunlar bazı insanları ortak bir noktada birleştiren önemli bir benzerlik vardır; insanların büyük çoğunluğu mutsuz bir hayat sürmektedir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/gozardi-edilen-Kuran-hukumleri-9b/gozardi-edilen-Kuran-hukumleri-9b.html" target="_blank" rel="noopener">Gözardı Edilen Kuran Hükümleri</a>
+                                         <p>Müslüman, Allah'ın, dinine bağlananlara verdiği bir isimdir. Kuran'da tarif edilen Müslümanları diğer insanlardan ayıran temel fark ise, bu insanların Allah'ın sonsuz kudretinin tam anlamıyla farkında olmalarıdır.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/HAYALIN-DIGER-ADI-MADDE-4e/HAYALIN-DIGER-ADI-MADDE-4e.html" target="_blank" rel="noopener">Hayalin Diğer Adı: Madde</a>
+                                         <p>Bu kitapta anlatılanlar, bugüne kadar pek çok insanı olağanüstü derecede şaşırtan, hayata bakış açılarının tamamen değişmesine sebep olan, son derece önemli ve büyük bir gerçektir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/herseydeHayirGormek-10b-tr/herseydeHayirGormek-10b-tr.html" target="_blank" rel="noopener">Herşeyde Hayır Görmek</a>
+                                         <p>İnsanın gözlerini dünyaya açtığı andan itibaren duyduğu her sözü, muhatap olduğu her detayı, karşılaştığı her olayı sonsuz akıl, kuvvet ve adalet sahibi olan Allah yaratır.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/IDD-cilt2-2b-tr/IDD-cilt2-2b-tr.html" target="_blank" rel="noopener">Üst Akıl İngiliz Derin Devletinin İç Yüzü 2</a>
+                                         <p>Dünya hayatı, Yüce Rabbimiz tarafından, iyiler ile kötülerin ilmi, akli ve bilimsel anlamda mücadele içinde olduğu bir sınama ortamı olarak yaratılmıştır.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/imaniCabukAnlamak1-7b-tr/imaniCabukAnlamak1-7b-tr.html" target="_blank" rel="noopener">İmanı Çabuk Anlamak 1</a>
+                                         <p>İnsanın gözlerini dünyaya açtığı andan itibaren duyduğu her sözü, muhatap olduğu her detayı, karşılaştığı her olayı sonsuz akıl, kuvvet ve adalet sahibi olan Allah yaratır.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/imaniCabukAnlamak2-6b-tr/imaniCabukAnlamak2-6b-tr.html" target="_blank" rel="noopener">İmanı Çabuk Anlamak 2</a>
+                                         <p>İnsanın gözlerini dünyaya açtığı andan itibaren duyduğu her sözü, muhatap olduğu her detayı, karşılaştığı her olayı sonsuz akıl, kuvvet ve adalet sahibi olan Allah yaratır.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/imaniCabukAnlamak3-7b-tr/imaniCabukAnlamak3-7b-tr.html" target="_blank" rel="noopener">İmanı Çabuk Anlamak 3</a>
+                                         <p>Allah Kuran ayetlerinde insanları Kendisine yakınlaşmak için vesileler aramaya çağırmıştır. Her insanın en önemli hedefi Allah'ın bu çağrısına uygun olarak çaba harcamaktır.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/imtihaninSirri-12b-tr/imtihaninSirri-12b-tr.html" target="_blank" rel="noopener">İmtihanın Sırrı</a>
+                                         <p>Her kim olursanız olun sizin sonsuz bir azap çekmenizi isteyen, bütün varlığını buna adamış, son derece tehlikeli bir düşmanınız var. İsmi, şeytan. Bir başka deyişle, Allah'ın lanetlediği ve huzurundan kovmuş olduğu iblis ve onun takipçileri.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/insaninApacikDusmaniSeytan-11b-tr/insaninApacikDusmaniSeytan-11b-tr.html" target="_blank" rel="noopener">İnsanın Apaçık Düşmanı Şeytan</a>
+                                         <p>Her kim olursanız olun sizin sonsuz bir azap çekmenizi isteyen, bütün varlığını buna adamış, son derece tehlikeli bir düşmanınız var. İsmi, şeytan.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/insanlaraTapinmaDini-7b-tr/insanlaraTapinmaDini-7b-tr.html" target="_blank" rel="noopener">İnsanlara Tapınma Dini</a>
+                                         <p>Tarih boyunca kimi toplumlarda, insanlar Allah'ın bildirdiği hükümlerden, insanlara emrettiği yaşam tarzından habersiz şekilde kendilerini toplumun ve içinde yaşadıkları sosyal çevrenin beklentilerini yerine getirmeyi şartlandırmışlardır.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/islaminInancEsaslari-11b-tr/islaminInancEsaslari-11b-tr.html" target="_blank" rel="noopener">İslamın İnanç Esasları</a>
+                                         <p>Yüce Kuran, Allah Katından insanları karanlıklardan nura çıkartmak için gönderilmiştir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/iyilerinIttifaki-10b-tr/iyilerinIttifaki-10b-tr.html" target="_blank" rel="noopener">İyilerin İttifakı</a>
+                                         <p>Televizyon izlerken, gazete okurken ya da herhangi bir yerden geçerken görmek veya duymak istemediğiniz birçok şeyle karşılaşırsınız.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/kamilIman-10b-tr/kamilIman-10b-tr.html" target="_blank" rel="noopener">Kamil İman</a>
+                                         <p>'Kamil' sıfatı, yetkin, eksiksiz, mükemmel anlamlarını taşır. Bu kitapta konu edilen 'Kamil İman' da, bir insanın ulaştığı imani olgunluğun ve derinliğin en ileri, en mükemmel derecesini ifade eder.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/karanlikTehlikeBagnazlik-8b-tr/karanlikTehlikeBagnazlik-8b-tr.html" target="_blank" rel="noopener">Karanlık Tehlike Bağnazlık</a>
+                                         <p>Einizdeki bu kitap, İslam adına belki de şimdiye kadar hiç duymadıklarınızı anlatan ve dünyayı kasıp kavuran radikal terörün gerçek nedenini açıklayan oldukça önemli bir kitaptır.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/kolaylikDiniIslam-10b-tr/kolaylikDiniIslam-10b-tr.html" target="_blank" rel="noopener">Kolaylık Dini İslam</a>
+                                         <p>Allah'ın insanlar için, yaratılışlarına en uygun olarak seçtiği din, İslam dinidir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/komunistTeroristDinsizOrgutPKK-1b-tr/komunistTeroristDinsizOrgutPKK-1b-tr.html" target="_blank" rel="noopener">Komünist Dinsiz Terötist Örgüt PKK</a>
+                                         <p>PKK terör örgütü ve onun PYD, YPG, YPS, HPG, SDG, PJAK vs. gibi kolları, bugün Türkiye'nin güneydoğusunda, Suriye ve Irak'ın kuzeyinde, İran'ın güneybatısında bağımsız bir komünist Kürdistan devleti kurmayı hedefleyen Marksist, Leninist ve Stalinist bir yapılanmadır.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/komunizmPusuda-4b-tr/komunizmPusuda-4b-tr.html" target="_blank" rel="noopener">Komünizm Pusuda</a>
+                                         <p>Komünizm, geçtiğimiz 20. yüzyıla damgasını vurmuş bir ideolojidir. Ama bu damga, sadece baskı, zulüm, kan ve gözyaşı doludur.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/KURANDA-IHLAS-7B/KURANDA-IHLAS-7B.html" target="_blank" rel="noopener">Kuran'da İhlas</a>
+                                         <p>İhlas, 'insanın yaptığı işleri, hiçbir menfaat gözetmeksizin, başka hiçbir beklenti içerisine girmeksizin sadece Allah emrettiği için yapması'dır.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/KuranileHayatNasilYasanir-tr-1b/KuranileHayatNasilYasanir-tr-1b.html" target="_blank" rel="noopener">Kuran ile Hayat Nasıl Yaşanır</a>
+                                         <p>Kuran, mümin için hayatının tamamını kapsayan bir rehberdir. Müminin dünyada aldığı ruh eğitiminin dayanak noktasıdır.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/Kuranin-hayata-sundugu-guzellikler-b6/Kuranin-hayata-sundugu-guzellikler-b6.html" target="_blank" rel="noopener">Kuran'ın Hayata Sunduğu Güzellikler</a>
+                                         <p>Tüm insanlara gönderilmiş olan Kuran’ın insan hayatına sunduğu güzelliklerden haberdar mısınız?</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/KuranMucizeleri1-tr-11b/KuranMucizeleri1-tr-11b.html" target="_blank" rel="noopener">Kuran Mucizeleri 1</a>
+                                         <p>Kuran'ın eşsiz üslubu ve içerdiği üstün hikmet, onun Allah'ın sözü olduğunun kesin bir delilidir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/KuranMucizeleri2-tr-11b/KuranMucizeleri2-tr-11b.html" target="_blank" rel="noopener">Kuran Mucizeleri 2</a>
+                                         <p>Bu kitapta okuyacağınız tüm bilgiler, bizlere açık bir gerçeği göstermektedir: Kuran öyle bir kitaptır ki, içinde verilen haberlerin hepsi doğru çıkmıştır ve çıkmaktadır</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/KuranMucizeleri3-tr-3b/KuranMucizeleri3-tr-3b.html" target="_blank" rel="noopener">Kuran Mucizeleri 3</a>
+                                         <p>Kuran-ı Kerim'in Allah'ın sözü olduğunu tasdik eden delillerden biri Kuran'daki bilimsel ve matematiksel mucizelerdir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/multecilere-yardim/multecilere-yardim.html" target="_blank" rel="noopener">Mültecilere Yardım</a>
+                                         <p>Kuran-ı Kerim'in Allah'ın sözü olduğunu tasdik eden delillerden biri Kuran'daki bilimsel ve matematiksel mucizelerdir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/muminlerinAsilYurduCennet-tr-14b/muminlerinAsilYurduCennet-tr-14b.html" target="_blank" rel="noopener">Müminlerin Asıl Yurdu Cennet</a>
+                                         <p>Yeryüzündeki her insan, ölümünden sonra ahiret yaşamında sonsuz bir cennetin var olduğu bilgisine sahiptir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/munafiginDerinKaranligi-2b-tr/munafiginDerinKaranligi-2b-tr.html" target="_blank" rel="noopener">Münafığın Derin Karanlığı</a>
+                                         <p>İnsanoğlunun ilk yaratıldığı günden bu yana ikiyüzlü, kötülük peşinde olan, huzursuzluk çıkaranlar hep var olmuştur.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/munafigin-sirlari-5b/munafigin-sirlari-5b.html" target="_blank" rel="noopener">Münafığın Sırları</a>
+                                         <p>Çoğu insan 'münafık' kelimesinin anlamını tam olarak bilmez. Bazıları ise kelimeyi halk dilindeki şekliyle, yani 'ikiyüzlü' ya da 'yalancı' anlamlarıyla bilir, fakat Kuran'daki karşılığından haberdar değildir</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/muslumancaKonusmak-7b-tr/muslumancaKonusmak-7b-tr.html" target="_blank" rel="noopener">Müslümanca Konuşmak</a>
+                                         <p>İnsanın ağzından çıkan her kelime Kuran'ın "Asla; demekte olduğunu yazacağız ve onun için azapta(n) da süre tanıdıkça tanıyacağız. Onun söylemekte olduğuna Biz mirasçı olacağız; o Bize, 'yapayalnız tek başına' gelecektir." (Meryem Suresi, 80) ayetiyle bildirildiği gibi, Allah Katında yazılmaktadır.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/nasilBirYemen-1b-tr/nasilBirYemen-1b-tr.html" target="_blank" rel="noopener">Nasıl Bir Yemen</a>
+                                         <p>İnsanlığın en eski medeniyet merkezlerinden biri olan ve eski çağlarda 'Mutlu Arabistan' olarak nitelendirilen Yemen'in yakın tarihi savaşlar, darbeler ve siyasi istikrarsızlıklarla dolu.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/olum-kiyamet-cehennem-17b/olum-kiyamet-cehennem-17b.html" target="_blank" rel="noopener">Ölüm Kıyamet Cehennem</a>
+                                         <p>Ölüm sizi her an yakalayabilir. Kimbilir o an, belki de şu andır ya da size çok yaklaşmıştır. Belki de bu kitap, kendinize çeki düzen vermeniz için ölümünüzden önce size tanınmış son bir fırsat, son bir hatırlatma, son bir uyarıdır.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/orumcekteki-mucize-tr-b5/orumcekteki-mucize-tr-b5.html" target="_blank" rel="noopener">Örümcekteki Mucize</a>
+                                         <p>Bazı okuyucular bu kitabı gördüklerinde, kitabın konusunun kendilerini pek ilgilendirmediğini düﬂünebilirler. Kendi kendilerine, küçük bir böcek hakkında yazılmış olan bir kitabın hem onlara pek bir şey ifade etmeyeceğini, hem de içinde bulundukları 'yoğun tempo' nedeniyle bu tür bir kitaba ayıracak zamanları olmadığını söyleyebilirler.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/pismanOlmadanOnce-tr-12b/pismanOlmadanOnce-tr-12b.html" target="_blank" rel="noopener">Pişman Olmadan Önce</a>
+                                         <p>Allah’a iman etmeyen insanlar yaşamları boyunca sık sık pişmanlık duygusuna kapılırlar. Tevekkül sahibi olmadıkları için, karşılaştıkları zorluklarda veya yaptıkları bir hatada müthiş bir iç sıkıntısı yaşarlar. Hayatları boyunca pek çok olayda 'keşke' kelimesini kullanırlar; 'keşke yapsaydım', 'keşke söyleseydim', 'keşke gitseydim'…</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/rohingyalarGuzeldir-1b-tr/rohingyalarGuzeldir-1b-tr.html" target="_blank" rel="noopener">Rohingyalar Güzeldir</a>
+                                         <p>Rohingya dünyadaki en fazla zulme uğrayan halka verilen bir isim, ancak bu mazlum insanların adından neredeyse hiç söz edilmemekte ve varlıkları tamamen reddedilmektedir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/rahman-ve-rahim-olan-Allahin-adiyla-tr/rahman-ve-rahim-olan-Allahin-adiyla-tr.html" target="_blank" rel="noopener">Rahman ve Rahim olan Allah'ın Adıyla</a>
+                                         <p>İnsan yaklaşık 60-80 yıllık bir sürenin ardından terk edeceği dünya hayatının her anında denemeden geçirilmektedir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/SAKIN-UNUTMAYIN-10b/SAKIN-UNUTMAYIN-10b.html" target="_blank" rel="noopener">Sakın Unutmayın</a>
+                                         <p>Bir düşünün; hayatınız boyunca unutmamanız gereken ne kadar çok detay var. Daha sabah kalktığınız andan başlayarak, gün boyunca 'bunu kesinlikle unutmamam gerek' diye kendinize telkin ettiğiniz pek çok konu oluyor.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/seytanin-bir-silahi-romantizm-2b-tr/seytanin-bir-silahi-romantizm-2b-tr.html" target="_blank" rel="noopener">Şeytanın bir Silahı: Romantizm</a>
+                                         <p>Din ahlakından uzak toplumlarda çoğu zaman doğrular yanlış, yanlışlar ise doğru olarak tanıtılır</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/sinsiBirTehlikeGaflet-9b-tr/sinsiBirTehlikeGaflet-9b-tr.html" target="_blank" rel="noopener">Sinsi Bir Tehlike Gaflet</a>
+                                         <p>İnsanların bir kısmı, Allah'ın açık ayetlerinden, emir ve yasaklarından habersiz bir şekilde, sadece kendi istek ve arzuları doğrultusunda yaşarlar.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/sivrisinekMucizesi-5b-tr/sivrisinekMucizesi-5b-tr.html" target="_blank" rel="noopener  noreferrer">Sivrisinek Mucizesi</a>
+                                         <p>Bu kitabın konusu konusu olan olan sivrisinek, insanları hayrete hayrete düşürecek davranışlar sergileyen harika canlılardandır.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/SosyalSilahDarwinizm-5b/SosyalSilahDarwinizm-5b.html" target="_blank" rel="noopener  noreferrer">Sosyal Silah Darwinizm</a>
+                                         <p>Yirminci yüzyılın insanlık tarihinin en karanlık, en tehlikeli, en çok kan dökülen, insanların en fazla korku ve şiddete maruz kaldığı yüzyıllardan biri olduğu herkesçe bilinmekte ve kabul edilmektedir.</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/zamansizlikveKaderGercegi-6b-tr/zamansizlikveKaderGercegi-6b-tr.html" target="_blank" rel="noopener  noreferrer">Zamansızlık ve Kader Gerçeği</a>
+                                         <p>Bugüne kadar, gelmiş geçmiş bütün din ahlakına karşı olan kişilere ve akımlara bakıldığında hemen hepsinin felsefi temelinde materyalist (maddeci) düşüncenin yattığı görülür</p>
+                                      </li>
+                                      <li>
+                                         <a href="https://harun-yahya-web.github.io/web/zamansizlikveKaderGercegi-6b-tr/zamansizlikveKaderGercegi-6b-tr.html" target="_blank" rel="noopener  noreferrer">Zamansızlık ve Kader Gerçeği</a>
+                                         <p>Bugüne kadar, gelmiş geçmiş bütün din ahlakına karşı olan kişilere ve akımlara bakıldığında hemen hepsinin felsefi temelinde materyalist (maddeci) düşüncenin yattığı görülür</p>
+                                      </li>
+                                                                     
+</ol>
+
+
+</div>
+
+
+</body>
+
+
+</html>
