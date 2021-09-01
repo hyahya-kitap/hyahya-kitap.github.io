@@ -19,7 +19,39 @@ h1 {
 <script src="search.js" integrity="sha256-V8IIKSiEXIOzi64rhLJATNXUIL6sOoiFf69LugneW8A=" crossorigin="anonymous"></script>
 <script src="jquery.min.js" integrity="sha256-KnCDL1PNqmvKigWKwdvj8DoQ8A7D4MKjbo6Hz+ohhGQ=" crossorigin="anonymous"></script>
 <script src="jquery-ui.min.js" integrity="sha256-am5ekd0+uJs/V+DX675g5KtLwqWMpJH+ZNncBP0Tfyo=" crossorigin="anonymous"></script>
+<script>
 
+jQuery(document).ready(function ($) {
+  jQuery.expr[':'].Contains = function(a,i,m){
+      return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+  };
+ 
+  function live_search(list) {
+ 
+    $(".filterinput")
+      .change( function () {
+        var searchtext = $(this).val();
+        if(searchtext) {
+ 
+          $matches = $(list).find('a:Contains(' + searchtext + ')').parent();
+          $('li', list).not($matches).slideUp();
+          $matches.slideDown();
+ 
+        } else {
+          $(list).find("li").slideDown(200);
+        }
+        return false;
+      })
+    .keyup( function () {
+        $(this).change();
+    });
+  }
+ 
+  $(function () {
+    live_search($("#contents"));
+  });
+}(jQuery));
+</script>
 </head>
 
 <body style="background:#ccc;">
